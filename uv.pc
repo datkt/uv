@@ -1,0 +1,5 @@
+Name: uv
+Version: 0.0.1
+Description: libuv bindings for Kotlin
+
+Libs: -luv

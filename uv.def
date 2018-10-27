@@ -1,0 +1,8 @@
+# vim: set syntax=make:
+
+headers = uv.h
+headerFilter = uv.h uv/**
+staticLibraries = libuv.a
+libraryPaths = lib
+compilerOpts = -Iinclude
+linkerOpts = -Llib
