@@ -72,7 +72,7 @@ fun main(args: Array<String>) {
 
 This package binds libuvs entire API and provides an
 [interop](https://github.com/JetBrains/kotlin-native/blob/master/INTEROP.md)
-API for Kotlin and can be imported from the `uv` package. For
+API for Kotlin and can be imported from the `uv` package.
 
 ## Building
 
