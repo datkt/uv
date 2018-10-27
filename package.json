@@ -1,6 +1,6 @@
 {
   "name": "uv",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "libuv bindings for Kotlin",
   "directories": {},
   "scripts": {
