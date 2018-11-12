@@ -25,11 +25,10 @@ uninstall:
 
 clean:
 	$(RM) uv-build/ uv.klib META-INF lib tmp libuv.a include
-	$(MAKE) clean -C examples
 	if test -f libuv/Makefile; then $(MAKE) clean -C libuv; fi
 
 uv.klib: uv.def lib/libuv.a
-	cinterop -compilerOpts "$(CFLAGS)" -linkerOpts "$(LDFLAGS)" -pkg datkt.uv -def uv.def -o uv
+	cinterop -compilerOpts '$(CFLAGS)' -linkerOpts '-lpthread' -linkerOpts '$(LDFLAGS)' -def uv.def -o uv
 
 lib/libuv.a: libuv
 	./configure
