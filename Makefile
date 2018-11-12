@@ -4,6 +4,9 @@ KCC ?= konanc
 KLIB ?= klib
 MKDIR = mkdir -p
 INSTALL ?= install
+PKGCONF ?= libuv/libuv.pc
+CFLAGS += $(shell pkg-config $(PKGCONF) --cflags)
+LDFLAGS += $(shell pkg-config $(PKGCONF) --libs)
 
 OS ?= $(shell uname)
 TEST ?= test/
@@ -26,7 +29,7 @@ clean:
 	if test -f libuv/Makefile; then $(MAKE) clean -C libuv; fi
 
 uv.klib: uv.def lib/libuv.a
-	cinterop -pkg datkt.uv -def uv.def -o uv
+	cinterop -compilerOpts "$(CFLAGS)" -linkerOpts "$(LDFLAGS)" -pkg datkt.uv -def uv.def -o uv
 
 lib/libuv.a: libuv
 	./configure
