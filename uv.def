@@ -1,8 +1,8 @@
 # vim: set syntax=make:
 
+package = datkt.uv
 headers = uv.h
 headerFilter = uv.h uv/**
-staticLibraries = libuv.a
 libraryPaths = lib
-compilerOpts = -Iinclude
-linkerOpts = -Llib
+staticLibraries = libuv.a
+linkerOpts = -lrt -lpthread -lnsl -ldl
