@@ -1,4 +1,4 @@
-library = "uv"
+library = "./uv.klib"
 repo = "@datkt/uv"
 
 ## CC compiler cflags
