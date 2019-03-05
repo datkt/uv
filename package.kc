@@ -1,2 +1,5 @@
 library = "uv"
 repo = "@datkt/uv"
+
+## CC compiler cflags
+cflags[] = "-I ${__dirname}/include"
