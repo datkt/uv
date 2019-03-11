@@ -5,8 +5,7 @@
   "directories": {},
   "scripts": {
     "test": "make test",
-    "build": "make",
-    "postinstall": "npm run fetch-libuv && npm run build",
+    "postinstall": "make klib",
     "fetch-libuv": "git submodule update --recursive --init"
   },
   "keywords": [
