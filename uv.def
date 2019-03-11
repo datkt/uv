@@ -5,4 +5,3 @@ headers = uv.h
 headerFilter = uv.h uv/**
 libraryPaths = lib
 staticLibraries = libuv.a
-linkerOpts = -lrt -lpthread -lnsl -ldl
