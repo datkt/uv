@@ -1,0 +1,7 @@
+libuv/
+include/
+lib/
+*-build/
+examples/
+*.tgz
+*.klib
