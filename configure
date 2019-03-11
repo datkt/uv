@@ -23,9 +23,8 @@ if [ -z "$SYSROOT" ]; then
       ;;
   esac
 
-  export CC=$(find $(find $(find $KONAN/dependencies -name *${ARCH/-/_/}* -type d) -name bin -type d) -name *$GCC | head -n1)
+  export CC=$(find $KONAN/dependencies -wholename *${ARCH/-/_}/bin/*gcc | head -n1)
 fi
 
-echo $CC
 ./configure --prefix=$PREFIX "$@"
 make install
