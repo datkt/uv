@@ -6,7 +6,6 @@ MKDIR = mkdir -p
 INSTALL ?= install
 PKGCONF ?= libuv/libuv.pc
 CFLAGS += $(shell pkg-config $(PKGCONF) --cflags)
-LDFLAGS += $(shell pkg-config $(PKGCONF) --libs)
 
 OS ?= $(shell uname)
 TEST ?= test/
@@ -29,7 +28,7 @@ clean:
 	rm -f uv.def
 
 uv.klib: uv.def lib/libuv.a
-	cinterop -compilerOpts '$(CFLAGS)' -linkerOpts '-lpthread' -linkerOpts '$(LDFLAGS)' -def uv.def -o uv
+	cinterop -compilerOpts '$(CFLAGS)' -def uv.def -o uv
 
 uv.def: uv.def.in
 	./configure
