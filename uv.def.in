@@ -5,4 +5,4 @@ headers = uv.h
 headerFilter = uv.h uv/**
 libraryPaths = lib
 staticLibraries = libuv.a
-linkerOpts = "-L/home/werle/repos/datkt/uv/lib -luv -lrt -lpthread -lnsl -ldl"
+linkerOpts = "{{LDFLAGS}}"

@@ -30,6 +30,9 @@ clean:
 uv.klib: uv.def lib/libuv.a
 	cinterop -compilerOpts '$(CFLAGS)' -linkerOpts '-lpthread' -linkerOpts '$(LDFLAGS)' -def uv.def -o uv
 
+uv.def: uv.def.in
+	./configure
+
 lib/libuv.a: libuv
 	./configure
 	$(MAKE) -C libuv
