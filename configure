@@ -28,5 +28,4 @@ fi
 
 cd ..
 rm -f uv.def
-export LDFLAGS="$(pkg-config libuv/libuv.pc --libs)"
 cat ./uv.def.in | ./scripts/mush.sh > uv.def
