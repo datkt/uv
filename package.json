@@ -1,6 +1,6 @@
 {
   "name": "@datkt/uv",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "libuv bindings for Kotlin",
   "directories": {},
   "scripts": {
